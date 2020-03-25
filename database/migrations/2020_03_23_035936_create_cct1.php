@@ -17,7 +17,7 @@ class CreateCct1 extends Migration
             $table->bigIncrements('id');
             $table->string('kelas')->default("text");
             $table->string('nik')->default("text");
-            $table->text('nama');
+            $table->string('nama')->default('');;
             $table->string('tier11');
             $table->string('tier12');
             $table->string('tier13');
