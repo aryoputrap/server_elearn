@@ -16,6 +16,7 @@ class SoalResource extends JsonResource
     {
         return [
             'id'                => $this->id,
+            'gambar'            => $this->gambar,
             'soal'              => $this->soal,
             'jawaban_a'         => $this->jawaban_a,
             'jawaban_b'         => $this->jawaban_b,

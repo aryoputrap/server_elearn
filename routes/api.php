@@ -14,6 +14,14 @@ Route::get('/Aryo', function(){
 Route::resource('soal', 'Api\Soal\SoalController')->except([
     'create', 'edit'
 ]);
+//CCT1
+Route::resource('cct1', 'Api\cct1\Ctt1Controller')->except(['create', 'edit']);
+//CCT2
+Route::resource('cct2', 'Api\cct2\Ctt1Controller')->except(['create', 'edit']);
+//CCT3
+Route::resource('cct3', 'Api\cct3\Ctt1Controller')->except(['create', 'edit']);
+//CCT4
+Route::resource('cct4', 'Api\cct4\Ctt1Controller')->except(['create', 'edit']);
 // //user
 // Route::resource('user', 'Api\User\UserController')->except([
 //     'create', 'edit'

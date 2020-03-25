@@ -5,6 +5,7 @@ use App\User;
 use App\soal;
 use App\pengaturan;
 use App\nilai;
+use App\cct1;
 
 class DatabaseSeeder extends Seeder
 {
@@ -19,5 +20,6 @@ class DatabaseSeeder extends Seeder
         factory(soal::class, 20)->create();
         factory(pengaturan::class, 20)->create();
         factory(nilai::class, 20)->create();
+        factory(cct1::class, 5)->create();
     }
 }
