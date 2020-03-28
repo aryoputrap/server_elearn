@@ -40,7 +40,7 @@ class cc1resource extends JsonResource
             'tier71'         => $this->tier71,
             'tier72'         => $this->tier72,
             'tier73'         => $this->tier73,
-            'tier73_e'         => $this->tier73_e,
+            'tier73_e'       => $this->tier73_e,
             'tier74'         => $this->tier74,
         ];
     }

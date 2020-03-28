@@ -1,19 +1,23 @@
 <?php
-
+use App\cc1;
 use Illuminate\Http\Request;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/Aryo', function(){
-    return 'Haloo Aryo';
-});
+// Route::get('/Aryo', function(){
+//     return 'Haloo Aryo';
+// });
 
 //soal
 Route::resource('soal', 'Api\Soal\SoalController')->except([
     'create', 'edit'
 ]);
+//CC1
+Route::post('cc1/post', function(){
+    return cc1::create(request()->all());
+});
 //CC1
 Route::resource('cc1', 'Api\cc1\cc1controller')->except(['create', 'edit']);
 //CCT1

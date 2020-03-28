@@ -16,14 +16,14 @@ class cc1controller extends Controller
     }
     
     
-    public function store(Request $request)
+    public function allpost(Request $request)
     {
         $soal = cc1::create($request->all());
-        return response(new cc1resource($soal), Response::HTTP_CREATED);
+        return response(new cc1resource($soal), Response::HTTP_CREATED)->json(['surat' => 'selamat']);
     }
 
-    // public function show(cc1 $soal)
-    // {
-    //     return new cc1resource($soal);
-    // }
+    public function show(cc1 $soal)
+    {
+        return new cc1resource($soal);
+    }
 }

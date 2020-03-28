@@ -32,6 +32,7 @@ class cct1resource extends JsonResource
             'tier34'         => $this->tier34,
             'tier41'         => $this->tier41,
             'tier42'         => $this->tier42,
+            'tier43'         => $this->tier43,
             'tier44'         => $this->tier44,
             'tier51'         => $this->tier51,
             'tier52'         => $this->tier52,
@@ -40,7 +41,7 @@ class cct1resource extends JsonResource
             'tier71'         => $this->tier71,
             'tier72'         => $this->tier72,
             'tier73'         => $this->tier73,
-            'tier73_e'         => $this->tier73_e,
+            'tier73_e'       => $this->tier73_e,
             'tier74'         => $this->tier74,
         ];
     }
