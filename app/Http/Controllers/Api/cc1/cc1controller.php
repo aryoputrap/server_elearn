@@ -19,7 +19,7 @@ class cc1controller extends Controller
     public function allpost(Request $request)
     {
         $soal = cc1::create($request->all());
-        return response(new cc1resource($soal), Response::HTTP_CREATED)->json(['surat' => 'selamat']);
+        return response(Response::HTTP_CREATED);
     }
 
     public function show(cc1 $soal)

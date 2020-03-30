@@ -28,13 +28,13 @@ Route::resource('cct2', 'Api\cct2\Ctt1Controller')->except(['create', 'edit']);
 Route::resource('cct3', 'Api\cct3\Ctt1Controller')->except(['create', 'edit']);
 //CCT4
 Route::resource('cct4', 'Api\cct4\Ctt1Controller')->except(['create', 'edit']);
-// //user
-// Route::resource('user', 'Api\User\UserController')->except([
-//     'create', 'edit'
-// ]);
+//USER 
+Route::resource('user', 'Api\User\UserController')->except([
+    'create', 'edit'
+]);
 
 // //user login
-// Route::post('user/login', 'Api\User\UserController@login');
+Route::post('user/login', 'Api\User\UserController@login');
 
 
 // //pengaturan
