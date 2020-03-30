@@ -21,4 +21,5 @@ Route::get('/Aryo', function(){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/export', 'Api\export\ExportController@exportexcel');
 Route::view('/{any}', 'home');
