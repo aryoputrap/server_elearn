@@ -1,5 +1,9 @@
 <?php
-use App\cc1;
+use App\cct1;
+use App\cct2;
+use App\cct3;
+use App\cct4;
+use App\skalasikap;
 use Illuminate\Http\Request;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
@@ -14,20 +18,37 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::resource('soal', 'Api\Soal\SoalController')->except([
     'create', 'edit'
 ]);
-//CC1
-Route::post('cc1/post', function(){
-    return cc1::create(request()->all());
-});
-//CC1
-Route::resource('cc1', 'Api\cc1\cc1controller')->except(['create', 'edit']);
 //CCT1
-Route::resource('cct1', 'Api\cct1\Ctt1Controller')->except(['create', 'edit']);
+Route::post('cct1/post', function(){
+    return cct1::create(request()->all());
+});
+//CCT2
+Route::post('cct2/post', function(){
+    return cct2::create(request()->all());
+});
+//CCT3
+Route::post('cct3/post', function(){
+    return cct3::create(request()->all());
+});
+//CCT4
+Route::post('cct4/post', function(){
+    return cct4::create(request()->all());
+});
+//SkalaSikap
+Route::post('skala/post', function(){
+    return skalasikap::create(request()->all());
+});
+
+//CCT1
+Route::resource('cct1', 'Api\cct2\Ctt1Controller')->except(['create', 'edit']);
 //CCT2
 Route::resource('cct2', 'Api\cct2\Ctt1Controller')->except(['create', 'edit']);
 //CCT3
 Route::resource('cct3', 'Api\cct3\Ctt1Controller')->except(['create', 'edit']);
 //CCT4
 Route::resource('cct4', 'Api\cct4\Ctt1Controller')->except(['create', 'edit']);
+//SkalaSikap
+Route::resource('skala', 'Api\cct4\Ctt1Controller')->except(['create', 'edit']);
 //USER 
 Route::resource('user', 'Api\User\UserController')->except([
     'create', 'edit'
@@ -35,6 +56,12 @@ Route::resource('user', 'Api\User\UserController')->except([
 
 // //user login
 Route::post('user/login', 'Api\User\UserController@login');
+//Export
+Route::get('exportcct1', 'Api\export\ExportController@exportexcel');
+Route::get('exportcct2', 'Api\export\Exportcct2@exportcc2');
+Route::get('exportcct3', 'Api\export\Exportcct3@exportcc3');
+Route::get('exportcct4', 'Api\export\Exportcct4@exportcc4');
+Route::get('exportskala', 'Api\export\ExportSkala@exportskala');
 
 
 // //pengaturan

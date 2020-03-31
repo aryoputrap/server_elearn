@@ -2,10 +2,10 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\cc1;
+use App\cct3;
 use Faker\Generator as Faker;
 
-$factory->define(cc1::class, function (Faker $faker) {
+$factory->define(Model::class, function (Faker $faker) {
     return [
         'kelas'          => $faker->name,
         'nik'            => '12201010',
@@ -25,14 +25,11 @@ $factory->define(cc1::class, function (Faker $faker) {
         'tier42'         => $faker->name,
         'tier43'         => $faker->name,
         'tier44'         => $faker->name,
-        'tier51'         => $faker->name,
-        'tier52'         => $faker->name,
-        'tier53'         => $faker->name,
         'tier61'         => $faker->name,
         'tier71'         => $faker->name,
         'tier72'         => $faker->name,
         'tier73'         => $faker->name,
-        'tier73_e'         => $faker->name,
+        'tier73_e'       => $faker->name,
         'tier74'         => $faker->name,
-        ];
+    ];
 });

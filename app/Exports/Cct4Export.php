@@ -2,16 +2,16 @@
 
 namespace App\Exports;
 
-use App\cct1;
+use App\cct4;
 use Maatwebsite\Excel\Concerns\FromCollection;
 
-class Cct1Export implements FromCollection
+class Cct4Export implements FromCollection
 {
     /**
     * @return \Illuminate\Support\Collection
     */
     public function collection()
     {
-        return cct1::all();
+        return cct4::all();
     }
 }

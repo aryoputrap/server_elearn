@@ -15,7 +15,6 @@ class Ctt1Controller extends Controller
         return Cct1resource::collection(cct1::latest()->get());
     }
     
-    
     public function store(Request $request)
     {
         $ctt = cct1::create($request->all());

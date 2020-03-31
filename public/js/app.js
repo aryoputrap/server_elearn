@@ -1997,20 +1997,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  watch: {
+    cct1: function cct1() {
+      this.getcct1();
+    }
+  },
+  methods: {
+    cct1: function cct1() {
+      axios.get('/api/exportcct1').then(function (response) {
+        alert(response);
+        console.log(response.data);
+      })["catch"](function (e) {
+        alert(e);
+        console.log(e);
+      });
+    },
+    cct2: function cct2() {
+      alert("okey");
+    }
+  }
+});
 
 /***/ }),
 
@@ -37774,81 +37781,84 @@ var staticRenderFns = [
       _c(
         "div",
         { staticClass: "panel-heading", staticStyle: { color: "white" } },
-        [_vm._v("\n            Hasil Ujian Siswa\n           ")]
+        [_vm._v("\n           HASIL UJIAN CCT TEXT\n       ")]
       ),
       _vm._v(" "),
       _c("div", { staticClass: "panel panel-info" }, [
-        _c("table", { staticClass: "table" }, [
-          _c("tr", [
-            _c("td", { staticClass: "middle" }, [
-              _c("div", { staticClass: "media" }, [
-                _c("div", { staticClass: "media-left" }, [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("img", {
-                      staticClass: "media-object",
-                      attrs: {
-                        src:
-                          "https://3.bp.blogspot.com/-EHwtjQuNicM/UDD2qTsdf4I/AAAAAAAAAQQ/KC1y2pa5Wxc/s1600/LOGO+UPI.png",
-                        height: "10px",
-                        width: "10px",
-                        alt: "..."
-                      }
-                    })
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "media-body" }, [
-                  _c("h4", { staticClass: "media-heading" }, [
-                    _vm._v("Keterangan : Keterangan")
-                  ]),
-                  _vm._v(" "),
-                  _c("address", [
-                    _vm._v("\n                    Kelas          :  3"),
-                    _c("br"),
-                    _vm._v(
-                      "\n                    Nama Siswa     : Andi Hoerudin"
-                    ),
-                    _c("br"),
-                    _vm._v("\n                    Jenis Kelasmin : Laki Laki"),
-                    _c("br"),
-                    _vm._v(
-                      "\n                    Nik            : 32919191\n                  "
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "media-body" }, [
-                  _c("h4", { staticClass: "media-heading" }, [
-                    _vm._v("Total Soal: 10")
-                  ]),
-                  _vm._v(" "),
-                  _c("address", [
-                    _vm._v("\n                    Jawaban Benar: 20"),
-                    _c("br"),
-                    _vm._v("\n                    Jawaban Salah: 30"),
-                    _c("br"),
-                    _vm._v("\n                    Jawaban Kosong: 0"),
-                    _c("br"),
-                    _vm._v(
-                      "\n                    Nilai Anda : 40\n                  "
-                    )
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("td", { staticClass: "middle", attrs: { width: "100" } }, [
-              _c("div", [
+        _c("table", { staticClass: "table table-hover" }, [
+          _c("thead", { staticClass: "table-head" }, [
+            _c("tr", [
+              _c("th", [_vm._v("HASIL CCT1")]),
+              _vm._v(" "),
+              _c("th", [_vm._v("HASIL CCT2")]),
+              _vm._v(" "),
+              _c("th", [_vm._v("HASIL CCT3")]),
+              _vm._v(" "),
+              _c("th", [_vm._v("HASIL CCT4")]),
+              _vm._v(" "),
+              _c("th", [_vm._v("SKALA SIKAP")])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tbody", [
+            _c("tr", [
+              _c("td", [
                 _c(
                   "a",
                   {
-                    staticClass: "btn btn-circle btn-danger btn-xs",
-                    attrs: { href: "#", title: "Hapus" }
+                    staticClass: "btn btn-info",
+                    attrs: { href: "/api/exportcct1" }
                   },
-                  [_c("i", { staticClass: "fas fa-trash" })]
+                  [_vm._v("Export CCT1")]
+                )
+              ]),
+              _vm._v(" "),
+              _c("td", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-info",
+                    attrs: { href: "/api/exportcct2" }
+                  },
+                  [_vm._v("Export CCT2")]
+                )
+              ]),
+              _vm._v(" "),
+              _c("td", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-info",
+                    attrs: { href: "/api/exportcct3" }
+                  },
+                  [_vm._v("Export CCT3")]
+                )
+              ]),
+              _vm._v(" "),
+              _c("td", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-info",
+                    attrs: { href: "/api/exportcct4" }
+                  },
+                  [_vm._v("Export CCT4")]
+                )
+              ]),
+              _vm._v(" "),
+              _c("td", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-info",
+                    attrs: { href: "/api/exportskala" }
+                  },
+                  [_vm._v("Skala Sikap")]
                 )
               ])
-            ])
+            ]),
+            _vm._v(" "),
+            _c("tr", [_c("td"), _vm._v(" "), _c("td"), _vm._v(" "), _c("td")])
           ])
         ])
       ])

@@ -32,7 +32,7 @@ $factory->define(cct1::class, function (Faker $faker) {
             'tier71'         => $faker->name,
             'tier72'         => $faker->name,
             'tier73'         => $faker->name,
-            'tier73_e'         => $faker->name,
+            'tier73_e'        => $faker->name,
             'tier74'         => $faker->name,
     ];
 });
